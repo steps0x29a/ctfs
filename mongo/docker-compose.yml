@@ -1,0 +1,18 @@
+services:
+  mongo:
+    build: ./dev/mongo/
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    restart: always
+  
+  apache_php:
+    build: ./dev/php/
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - mongo
+    restart: always

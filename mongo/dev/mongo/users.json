@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "60e4651a6aa8f5f72049dad6"
+  },
+  "username": "admin",
+  "password": "nimda"
+},{
+  "_id": {
+    "$oid": "60e465446aa8f5f72049dad7"
+  },
+  "username": "root",
+  "password": "Qald]b!Z_d5Kn"
+},{
+  "_id": {
+    "$oid": "60e5d07b8a81ae580018cbbb"
+  },
+  "username": "third",
+  "password": "AB_.#+*[]{}()!$4"
+}]

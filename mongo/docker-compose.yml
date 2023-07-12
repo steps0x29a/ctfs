@@ -16,3 +16,12 @@ services:
     links:
       - mongo
     restart: always
+
+  mongoseed:
+    build: ./dev/mongoseed/
+    links:
+      - mongo
+    volumes:
+      - ./mongoseed:/mongoseed
+    restart: no
+    command: /tmp/seed.sh

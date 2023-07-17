@@ -22,3 +22,11 @@ root: root:??????????
 apk add --update docker docker-compose openrc sudo nano
 rc-update add docker boot
 service docker start
+
+----
+
+User guide
+
+Download virtual machine from github
+Import it into Oracle Virtual Box (choose "new MAC addresses for all adapters")
+

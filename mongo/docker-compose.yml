@@ -5,7 +5,7 @@ services:
       - "27017:27017"
     volumes:
       - ./data:/data/db
-    restart: always
+    restart: unless-stopped
   
   apache_php:
     build: ./dev/php/
@@ -15,7 +15,7 @@ services:
       - ./www:/var/www/html
     links:
       - mongo
-    restart: always
+    restart: unless-stopped
 
   mongoseed:
     build: ./dev/mongoseed/
@@ -23,5 +23,5 @@ services:
       - mongo
     volumes:
       - ./mongoseed:/mongoseed
-    restart: no
-    command: /tmp/seed.sh
+    restart: "no"
+    command: mongoimport --host mongo --db exploit --collection users --type json --file /tmp/users.json --jsonArray
